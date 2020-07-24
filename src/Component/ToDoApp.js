@@ -11,15 +11,17 @@ const ToDoApp = () => {
   };
 
   const listOfItem = () => {
+    if(inputList===" "){
+      alert("Add Item first")
+    }else{
     setItems((oldItems) => {
       return [inputList, ...oldItems];
     });
     setInputList("");
+    }
   };
 
   const deleteItem = (id) => {
-    console.log("deleted");
-
     setItems((oldItems) => {
       return oldItems.filter((newArr, index) => {
         return index !== id;
