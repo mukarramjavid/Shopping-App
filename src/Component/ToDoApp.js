@@ -11,8 +11,8 @@ const ToDoApp = () => {
   };
 
   const listOfItem = () => {
-    if(inputList===" "){
-      alert("Add Item first")
+    if(inputList===""){
+      alert("Add Item first");
     }else{
     setItems((oldItems) => {
       return [inputList, ...oldItems];
